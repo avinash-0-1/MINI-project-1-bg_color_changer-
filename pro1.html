@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGORUND COLOR CHANGER</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="main">
+        <h1>SELECT A COLOUR BELOW</S></h1>
+        <button class="button" id="white">W</button>
+        <button class="button" id="grey">G</button>
+        <button class="button" id="brown">B</button>
+        <button class="button" id="red">R</button>
+        <p>BY CLICKING THE ABOVE COLOUR BUTTON WHOLE BACKGROUND WILL CHANGE...!!</p>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('.button')
+    const body = document.querySelector('body')
+    
+    buttons.forEach(function (bu) {
+        bu.addEventListener('click',function(e){
+            if(e.target.id === 'brown'){
+                body.style.backgroundColor = 'brown';
+            }
+        })
+        bu.addEventListener('click',function(e){
+            if(e.target.id === 'white'){
+                body.style.backgroundColor = 'white';
+            }
+        })
+        bu.addEventListener('click',function(e){
+            if(e.target.id === 'red'){
+                body.style.backgroundColor = 'red';
+            }
+        })
+        bu.addEventListener('click',function(e){
+            if(e.target.id === 'grey'){
+                body.style.backgroundColor = 'grey';
+            }
+        })
+    });
+</script>
+</html>
